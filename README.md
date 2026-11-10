@@ -1,10 +1,27 @@
 <ins>**Resource Efficient Federated Deep Learning for IoT Security Monitoring**</ins>
 
+![Research](https://img.shields.io/badge/Research-IoT%20Security-blue) ![Federated Learning](https://img.shields.io/badge/AI-Federated%20Learning-green) ![Platform](https://img.shields.io/badge/Platform-Edge%20Computing-orange)
+
+**An experimental IoT edge testbed for investigating resource-efficient federated deep learning for distributed security monitoring.**
+
+This repository provides the implementation associated with the research paper Resource Efficient Federated Deep Learning for IoT Security Monitoring (Zakariyya et al., 2022).
+
+The project investigates how federated deep learning can support IoT security monitoring while reducing computational and communication overhead on resource-constrained edge devices.
+
 **Overview**
 
-This project investigates the deployment of resource-efficient federated deep-learning algorithms to strengthen security monitoring in Internet of Things (IoT) environments. It explores how federated learning can support distributed model training across connected devices while reducing the need to centralise potentially sensitive data.
+Internet of Things (IoT) environments increasingly require intelligent security monitoring to identify malicious network activity and emerging cyber threats.
 
-To evaluate the approach under practical deployment conditions, a realistic IoT testbed was developed using GB-BXBT-2807 devices. The testbed provides an experimental environment for implementing and evaluating federated deep-learning techniques, with a focus on the challenges of distributed learning and resource-constrained IoT systems.
+Traditional centralised machine-learning approaches often require collecting data from distributed devices at a central location. Federated Learning (FL) offers an alternative by enabling model training across distributed devices while keeping their training data local.
+
+However, deploying deep-learning models in resource-constrained IoT environments introduces challenges, particularly in terms of memory consumption, processing time and communication overhead.
+
+This project investigates Resource-Efficient Federated Deep Learning (REFDL) using a practical IoT testbed.
+
+The research explores optimisation techniques for Federated Averaging (FedAvg), including model pruning and simulated micro-batching, to improve the efficiency of distributed deep-learning operations.
+
+The experimental work includes virtual federated workers and a physical edge-computing testbed based on GB-BXBT-2807 devices.
+
 
 **Objectives**
 
