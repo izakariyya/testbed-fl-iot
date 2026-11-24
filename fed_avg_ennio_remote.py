@@ -31,14 +31,51 @@ print(args)
 
 hook = sy.TorchHook(torch)
 
-kwargs_websocket_alice = {"host": "192.168.0.23", "hook": hook}
-alice = WebsocketClientWorker(id="alice", port=8777, **kwargs_websocket_alice)
-kwargs_websocket_bob = {"host": "192.168.0.24", "hook": hook}
-bob = WebsocketClientWorker(id="bob", port=8778, **kwargs_websocket_bob)
-kwargs_websocket_charlie = {"host": "192.168.0.25", "hook": hook}
-charlie = WebsocketClientWorker(id="charlie", port=8779, **kwargs_websocket_charlie)
-kwargs_websocket_jane = {"host": "192.168.0.26", "hook": hook}
-jane = WebsocketClientWorker(id="jane", port=8780, **kwargs_websocket_jane)
+# Websocket worker hosts
+ALICE_HOST = "192.168.0.23"
+BOB_HOST = "192.168.0.24"
+CHARLIE_HOST = "192.168.0.25"
+JANE_HOST = "192.168.0.26"
+
+kwargs_websocket_alice = {
+    "host": ALICE_HOST,
+    "hook": hook
+}
+alice = WebsocketClientWorker(
+    id="alice",
+    port=8777,
+    **kwargs_websocket_alice
+)
+
+kwargs_websocket_bob = {
+    "host": BOB_HOST,
+    "hook": hook
+}
+bob = WebsocketClientWorker(
+    id="bob",
+    port=8778,
+    **kwargs_websocket_bob
+)
+
+kwargs_websocket_charlie = {
+    "host": CHARLIE_HOST,
+    "hook": hook
+}
+charlie = WebsocketClientWorker(
+    id="charlie",
+    port=8779,
+    **kwargs_websocket_charlie
+)
+
+kwargs_websocket_jane = {
+    "host": JANE_HOST,
+    "hook": hook
+}
+jane = WebsocketClientWorker(
+    id="jane",
+    port=8780,
+    **kwargs_websocket_jane
+)
 
 workers = [alice, bob, charlie, jane]
 print(workers)
